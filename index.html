@@ -18,12 +18,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+</head> 
 
 <body>
     <div id="root">
-        
+        <ul v-for="(elem,index) in mail">
+            <li>{{ elem}}</li>
+        </ul> 
+        <button type="button" class="btn btn-primary" @click="mailrandom">Primary</button>
+       
     </div>
+
+
+    <!-- script axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- script day.js -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>

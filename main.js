@@ -14,15 +14,39 @@ var app = new Vue(
 
     data: {
 
-    
+    mail:'',
 
+  
     },
 
+    mounted(){
+
+      axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+      .then( (resp) => {
+
+         this.mail = [resp.data.response];
+       })
+     
+    },
 
     methods: {
 
+      mailrandom(){
+
+        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+        .then( (resp) => {
+
+            this.mail.push(resp.data.response) 
+          
+        })
+     
+
+      }
+
+    
+
       
       
-  }
+  },
 
 })
