@@ -14,18 +14,18 @@ var app = new Vue(
 
     data: {
 
-    mail:'',
+    mail:[],
 
   
     },
 
     mounted(){
 
-      axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-      .then( (resp) => {
+      // axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+      // .then( (resp) => {
 
-         this.mail = [resp.data.response];
-       })
+      //    this.mail = [resp.data.response];
+      //  })
      
     },
 
