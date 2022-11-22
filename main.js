@@ -21,24 +21,27 @@ var app = new Vue(
 
     mounted() {
 
-      // axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-      // .then( (resp) => {
+      for (let i = 0; i < 10; i++) {
 
-      //    this.mail = [resp.data.response];
-      //  })
-
+        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+          .then((resp) => {
+            let emailsingola = resp.data.response
+            this.mail.push(emailsingola)
+          })
+      }
     },
 
     methods: {
 
-      mailrandom() {
+      //   mailrandom() {
 
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-          .then((resp) => {
+      //     axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+      //       .then((resp) => {
 
-            this.mail.push(resp.data.response)
-          })
-      }
-    },
+      //         this.mail.push(resp.data.response)
+      //       })
+      //   }
+      // },
+    }
 
   })
